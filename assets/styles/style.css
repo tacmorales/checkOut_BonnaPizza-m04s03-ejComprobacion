@@ -1,0 +1,69 @@
+body{
+  background-image: linear-gradient(to right, #127004, #3f6b00, #576600, #6a6000, #785a00, #835700, #8f5300, #9b4e05, #ad4900, #bf4000, #d33203, #e71310);
+}
+
+h1{
+  text-align: center;
+}
+
+h1::after, h1::before{
+  content: "🍕 Bonna Pizza 🍕 Bonna Pizza 🍕"
+}
+
+h2{
+  margin-top: 0;
+}
+
+ul, span{
+  display: inline;
+  padding-left: 6px;
+  margin: 0;
+}
+
+li{
+  display: inline;
+  padding-left: 6px;
+}
+
+li::after{
+  content: ",";
+}
+
+li:last-child::after{
+  content: "";
+}
+
+input{
+  margin-top: 10px;
+}
+
+table{
+  text-align: left;
+}
+
+.container {
+  padding: 5px 5px 10px 5px;
+  margin: 60px 10px 10px 10px;
+  background-color: white;
+  border-radius: 10px;
+  border: solid;
+  display: flex;
+  flex-direction: column;
+}
+
+.column{
+  width: 100%;
+  margin: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .column{
+    width: 50%;
+    margin: 10px;
+  }
+  .container{
+    display: flex;
+    flex-direction: row;
+  }
+}
+

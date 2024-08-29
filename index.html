@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="stylesheet" href="assets/styles/style.css" >
-    <title>Check Out - Bonna Pizza</title>
-  </head>
-  <body>
-    <form action="#">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/styles/style.css">
+  <title>Check Out - Bonna Pizza</title>
+</head>
+
+<body>
+  <h1>Bonna Pizza</h1>
+  <div class="container">
+    <div class="column">
       <h2>MEJORA TU PIZZA</h2>
       <p>
         Puede elegir 3 ingredientes gratis. Cada ingrediente adicional cuesta
@@ -16,93 +20,86 @@
       <fieldset>
         <legend>Ingredientes disponibles para agregar a su pizza:</legend>
         <div>
-          <input type="checkbox" id="carne" name="carne" >
+          <input type="checkbox" id="carne" name="carne" value="Carne">
           <label for="carne">Carne</label>
         </div>
         <div>
-          <input type="checkbox" id="pollo" name="pollo" >
+          <input type="checkbox" id="pollo" name="pollo" value="Pollo">
           <label for="pollo">Pollo</label>
         </div>
         <div>
-          <input type="checkbox" id="tocino" name="tocino" >
+          <input type="checkbox" id="tocino" name="tocino" value="Tocino">
           <label for="tocino">Tocino</label>
         </div>
         <div>
-          <input type="checkbox" id="mozzarella" name="mozzarella" >
+          <input type="checkbox" id="mozzarella" name="mozzarella" value="Mozzarella">
           <label for="mozzarella">Mozzarella</label>
         </div>
         <div>
-          <input type="checkbox" id="champinon" name="champinon" >
+          <input type="checkbox" id="champinon" name="champinon" value="Champiñón">
           <label for="champinon">Champiñón</label>
         </div>
         <div>
-          <input type="checkbox" id="cebolla" name="cebolla" >
+          <input type="checkbox" id="cebolla" name="cebolla" value="Cebolla">
           <label for="cebolla">Cebolla</label>
         </div>
         <div>
-          <input type="checkbox" id="pina" name="pina" >
+          <input type="checkbox" id="pina" name="pina" value="Piña">
           <label for="pina">Piña</label>
         </div>
         <div>
-          <input type="checkbox" id="pimenton" name="pimenton" >
+          <input type="checkbox" id="pimenton" name="pimenton" value="Pimentón">
           <label for="pimenton">Pimentón</label>
         </div>
       </fieldset>
       <p>
         Los ingredientes <b>seleccionados</b> son:
-        <span id="ingredientesSeleccionados"></span>
       </p>
+      <ul id="ingredientesSeleccionados">
+      </ul>
       <p>
-        Los ingredientes <b>extras</b> son: <span id="ingredientesExtra"></span>
+        Los ingredientes <b>extras</b> son:
       </p>
+      <ul id="ingredientesExtra">
+      </ul>
+    </div>
+    <div class="column">
       <h2>RESUMEN DEL PEDIDO</h2>
-      <table>
-        <caption>
-          El detalle del pedido para su revisión.
-        </caption>
-        <tbody>
-          <tr>
-            <th scope="row"><label for="valorBase">Pizza XL</label></th>
-            <td>$
-              <input
-                name="valorBase"
-                type="number"
-                value="15000"
-                readonly
-                placeholder="$15.000"
-            >
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">
-              <label for="valorExtra">Ingredientes Extra</label>
-            </th>
-            <td>$
-              <input
-                name="valorExtra"
-                type="number"
-                value=""
-                readonly
-                placeholder=""
-              >
-            </td>
-          </tr>
-          <tr>
-            <th scope="row"><label for="propina">Propina</label></th>
-            <td>$
-              <input
-                name="propina"
-                type="number"
-                value=""
-                readonly
-                placeholder=""
-              >
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <input type="number" name="propinaInput" placeholder="Ingresar Propina" >
-      <button type="submit">Enviar Pedido con Propina</button>
-    </form>
-  </body>
+      <form action="#">
+        <table>
+          <caption>
+            El detalle del pedido para su revisión:
+          </caption>
+          <tbody>
+            <tr>
+              <th scope="row"><label for="valorBase">Pizza XL</label></th>
+              <td>$
+                <input id="valorBase" name="valorBase" type="number" value="15000" readonly>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label for="valorExtra">Ingredientes Extras</label>
+              </th>
+              <td>$
+                <input id="valorExtra" name="valorExtra" type="number" value="0" readonly placeholder="0">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row"><label for="valorPropina">Propina</label></th>
+              <td>$
+                <input id="valorPropina" name="valorPropina" type="number" value="" readonly>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <input id="inputPropina" type="number" name="propinaInput" placeholder="Ingresar Propina" value="">
+        <button id="btnEnviarPedido" type="submit">Enviar Pedido con Propina</button>
+      </form>
+      <hr>
+      <p><strong><em>TOTAL: $<span id="total"></span></em></strong></p>
+    </div>
+  </div>
+  <script src="assets/scripts/script.js"></script>
+</body>
 </html>
