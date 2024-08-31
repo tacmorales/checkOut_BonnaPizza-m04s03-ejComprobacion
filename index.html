@@ -19,37 +19,41 @@
       </p>
       <fieldset>
         <legend>Ingredientes disponibles para agregar a su pizza:</legend>
-        <div>
-          <input type="checkbox" id="carne" name="carne" value="Carne">
-          <label for="carne">Carne</label>
+        <div class="column-fieldset">
+          <div>
+            <input type="checkbox" id="carne" name="carne" value="Carne">
+            <label for="carne">Carne</label>
+          </div>
+          <div>
+            <input type="checkbox" id="pollo" name="pollo" value="Pollo">
+            <label for="pollo">Pollo</label>
+          </div>
+          <div>
+            <input type="checkbox" id="tocino" name="tocino" value="Tocino">
+            <label for="tocino">Tocino</label>
+          </div>
+          <div>
+            <input type="checkbox" id="mozzarella" name="mozzarella" value="Mozzarella">
+            <label for="mozzarella">Mozzarella</label>
+          </div>
         </div>
-        <div>
-          <input type="checkbox" id="pollo" name="pollo" value="Pollo">
-          <label for="pollo">Pollo</label>
-        </div>
-        <div>
-          <input type="checkbox" id="tocino" name="tocino" value="Tocino">
-          <label for="tocino">Tocino</label>
-        </div>
-        <div>
-          <input type="checkbox" id="mozzarella" name="mozzarella" value="Mozzarella">
-          <label for="mozzarella">Mozzarella</label>
-        </div>
-        <div>
-          <input type="checkbox" id="champinon" name="champinon" value="Champiñón">
-          <label for="champinon">Champiñón</label>
-        </div>
-        <div>
-          <input type="checkbox" id="cebolla" name="cebolla" value="Cebolla">
-          <label for="cebolla">Cebolla</label>
-        </div>
-        <div>
-          <input type="checkbox" id="pina" name="pina" value="Piña">
-          <label for="pina">Piña</label>
-        </div>
-        <div>
-          <input type="checkbox" id="pimenton" name="pimenton" value="Pimentón">
-          <label for="pimenton">Pimentón</label>
+        <div class="column-fieldset">
+          <div>
+            <input type="checkbox" id="champinon" name="champinon" value="Champiñón">
+            <label for="champinon">Champiñón</label>
+          </div>
+          <div>
+            <input type="checkbox" id="cebolla" name="cebolla" value="Cebolla">
+            <label for="cebolla">Cebolla</label>
+          </div>
+          <div>
+            <input type="checkbox" id="pina" name="pina" value="Piña">
+            <label for="pina">Piña</label>
+          </div>
+          <div>
+            <input type="checkbox" id="pimenton" name="pimenton" value="Pimentón">
+            <label for="pimenton">Pimentón</label>
+          </div>
         </div>
       </fieldset>
       <p>
@@ -74,7 +78,7 @@
             <tr>
               <th scope="row"><label for="valorBase">Pizza XL</label></th>
               <td>$
-                <input id="valorBase" name="valorBase" type="number" value="15000" readonly>
+                <input id="valorBase" name="valorBase" type="text" value="15.000" readonly>
               </td>
             </tr>
             <tr>
@@ -82,22 +86,24 @@
                 <label for="valorExtra">Ingredientes Extras</label>
               </th>
               <td>$
-                <input id="valorExtra" name="valorExtra" type="number" value="0" readonly placeholder="0">
+                <input id="valorExtra" name="valorExtra" type="text" value="0" readonly placeholder="0">
               </td>
             </tr>
             <tr>
               <th scope="row"><label for="valorPropina">Propina</label></th>
               <td>$
-                <input id="valorPropina" name="valorPropina" type="number" value="" readonly>
+                <input id="valorPropina" name="valorPropina" type="text" value="" readonly>
               </td>
             </tr>
           </tbody>
         </table>
-        <input id="inputPropina" type="number" name="propinaInput" placeholder="Ingresar Propina" value="">
-        <button id="btnEnviarPedido" type="submit">Enviar Pedido con Propina</button>
+        <div class="row">
+          <input id="inputPropina" type="text" name="propinaInput" placeholder="Ingresar Propina" value="">
+          <button id="btnEnviarPedido" type="submit">Enviar Pedido con Propina</button>
+        </div>
       </form>
       <hr>
-      <p><strong><em>TOTAL: $<span id="total"></span></em></strong></p>
+      <p id="total-container"><strong><em>TOTAL: $<span id="total"></span></em></strong></p>
     </div>
   </div>
   <script src="assets/scripts/script.js"></script>
